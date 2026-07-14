@@ -58,7 +58,7 @@ const [travelMode, setTravelMode] = useState("driving-car");
 };
   return (
 
-    <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+    <div className="bg-white border border-slate-200 rounded-xl p-4 md:p-6 shadow-sm">
 
       <h2 className="text-xl font-semibold">
         Plan Eco Route
@@ -79,7 +79,7 @@ const [travelMode, setTravelMode] = useState("driving-car");
           <input
             value={source}
             onChange={(e)=>setSource(e.target.value)}
-            className="w-full border border-slate-300 rounded-lg px-4 py-3 outline-none focus:border-green-600"
+            className="w-full border border-slate-300 rounded-lg px-4 py-3 text-sm md:text-base outline-none focus:border-green-600"
             placeholder="Enter source"
           />
 
@@ -94,7 +94,7 @@ const [travelMode, setTravelMode] = useState("driving-car");
           <input
             value={destination}
             onChange={(e)=>setDestination(e.target.value)}
-            className="w-full border border-slate-300 rounded-lg px-4 py-3 outline-none focus:border-green-600"
+            className="w-full border border-slate-300 rounded-lg px-4 py-3 text-sm md:text-base outline-none focus:border-green-600"
             placeholder="Enter destination"
           />
 
@@ -104,7 +104,7 @@ const [travelMode, setTravelMode] = useState("driving-car");
     Travel Mode
   </label>
 
-  <div className="grid grid-cols-3 gap-3">
+  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
 
     <button
       type="button"

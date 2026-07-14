@@ -64,56 +64,36 @@ import { useState } from "react";
 
       <Navbar />
 
-      <main className="max-w-[1600px] mx-auto px-6 py-6">
+    <main className="max-w-[1700px] mx-auto px-4 md:px-6 lg:px-8 py-6">
 
-        <div className="grid grid-cols-12 gap-6">
+  <div className="grid grid-cols-1 xl:grid-cols-12 gap-6">
 
-          {/* Sidebar */}
+    {/* Sidebar */}
+    <div className="xl:col-span-3">
+      <PlannerSidebar
+        setRouteData={setRouteData}
+        loading={loading}
+        setLoading={setLoading}
+      />
+    </div>
 
-          <div className="col-span-3">
+    {/* Map */}
+    <div className="xl:col-span-6">
+      <PlannerMap routeData={routeData} />
+    </div>
 
-            <PlannerSidebar
-              setRouteData={setRouteData}
-              loading={loading}
-              setLoading={setLoading}
-            />
+    {/* Route Summary */}
+    <div className="xl:col-span-3">
+      <PlannerResult routeData={routeData} />
+    </div>
 
-          </div>
+  </div>
 
-          {/* Map */}
+  <div className="mt-6">
+    <RecommendationCard routeData={routeData} />
+  </div>
 
-          <div className="col-span-6">
-
-            <PlannerMap
-              routeData={routeData}
-            />
-
-          </div>
-
-          {/* Result */}
-
-          <div className="col-span-3">
-
-            <PlannerResult
-              routeData={routeData}
-            />
-
-          </div>
-
-        </div>
-
-        {/* Recommendation */}
-
-        <div className="mt-6">
-
-          <RecommendationCard
-            routeData={routeData}
-          />
-
-        </div>
-
-      </main>
-
+</main>
     </div>
   );
 }

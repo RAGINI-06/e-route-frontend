@@ -1,7 +1,7 @@
 function PlannerResult({ routeData }) {
 
   return (
-    <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm h-full">
+    <div className="bg-white border border-slate-200 rounded-xl p-4 md:p-6 shadow-sm h-full">
 
       <h2 className="text-xl font-semibold mb-6">
         Route Summary

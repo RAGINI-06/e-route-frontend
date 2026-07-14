@@ -33,7 +33,18 @@ function PlannerMap({ routeData }) {
       : [20.5937, 78.9629];
 
   return (
-    <div className="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm h-[650px]">
+    <div className="
+bg-white
+border
+border-slate-200
+rounded-xl
+overflow-hidden
+shadow-sm
+h-[320px]
+sm:h-[420px]
+lg:h-[520px]
+xl:h-[650px]
+">
 
       <MapContainer
         center={source}

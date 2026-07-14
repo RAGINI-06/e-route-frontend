@@ -1,6 +1,6 @@
 function RecommendationCard() {
   return (
-    <div className="bg-white border border-slate-200 rounded-xl p-6 shadow-sm">
+    <div className="bg-white border border-slate-200 rounded-xl p-4 md:p-6 shadow-sm">
 
       <h2 className="text-lg font-semibold text-slate-900">
         Recommendation
